@@ -8,7 +8,8 @@ import org.openqa.selenium.By;
 import starter.navigation.NavigateTo;
 
 public class SearchStepDefinitions extends UIInteractionSteps {
-    private final By inputSearch = By.name("email");
+    private final By inputSearchNetFlix = By.name("email");
+    private final By inputSearchNetAmazon = By.name("field-keywords");
 
     @Given("{actor} is researching things on the internet")
     public void researchingThings(Actor actor) {
@@ -19,11 +20,22 @@ public class SearchStepDefinitions extends UIInteractionSteps {
     public void searchesFor(String term) {
         for (int i = 0; i <= 7; i++) {
 //            Selenium implementation
-            $(inputSearch).clear();
-            $(inputSearch).sendKeys(term);
+            $(inputSearchNetFlix).clear();
+            $(inputSearchNetFlix).sendKeys(term);
 //            Serenity Implementation
-//            $(inputSearch).type(term);
+//            $(inputSearchNetFlix).type(term);
         }
     }
+
+//    @When("he looks up {string}")
+//    public void searchesForAmazon(String term) {
+//        for (int i = 0; i <= 7; i++) {
+////            Selenium implementation
+//            $(inputSearchNetAmazon).clear();
+//            $(inputSearchNetAmazon).sendKeys(term);
+////            Serenity Implementation
+////            $(inputSearchNetAmazon).type(term);
+//        }
+//    }
 
 }
