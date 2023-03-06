@@ -17,24 +17,16 @@ public class SearchStepDefinitions extends UIInteractionSteps {
     }
 
     @When("he looks up {string}")
-    public void searchesFor(String term) {
+    public void searchesForNetflix(String term) {
         for (int i = 0; i <= 7; i++) {
-//            Selenium implementation
-            $(inputSearchNetFlix).clear();
-            $(inputSearchNetFlix).sendKeys(term);
-//            Serenity Implementation
-//            $(inputSearchNetFlix).type(term);
+            $(inputSearchNetFlix).type(term);
         }
     }
 
 //    @When("he looks up {string}")
 //    public void searchesForAmazon(String term) {
 //        for (int i = 0; i <= 7; i++) {
-////            Selenium implementation
-//            $(inputSearchNetAmazon).clear();
-//            $(inputSearchNetAmazon).sendKeys(term);
-////            Serenity Implementation
-////            $(inputSearchNetAmazon).type(term);
+//            $(inputSearchNetAmazon).type(term);
 //        }
 //    }
 
